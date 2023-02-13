@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Заказы</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="/assets/img/logo.png" alt="">
+      <span class="d-none d-lg-block">MI | X-store</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+  </div><!-- End Logo -->
+
+  <div class="search-bar">
+    <form class="search-form d-flex align-items-center" method="POST" action="#">
+      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+    </form>
+  </div><!-- End Search Bar -->
+
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown">
+
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+          <li class="dropdown-header">
+            У тебя есть новые уведомления
+            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Прочитать все</span></a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-exclamation-circle text-warning"></i>
+            <div>
+              <h4>Lorem Ipsum</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>30 min. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-x-circle text-danger"></i>
+            <div>
+              <h4>Atque rerum nesciunt</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>1 hr. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-check-circle text-success"></i>
+            <div>
+              <h4>Sit rerum fuga</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>2 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li class="notification-item">
+            <i class="bi bi-info-circle text-primary"></i>
+            <div>
+              <h4>Dicta reprehenderit</h4>
+              <p>Quae dolorem earum veritatis oditseno</p>
+              <p>4 hrs. ago</p>
+            </div>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li class="dropdown-footer">
+            <a href="#">Show all notifications</a>
+          </li>
+
+        </ul><!-- End Notification Dropdown Items -->
+
+      </li><!-- End Notification Nav -->
+
+      <li class="nav-item dropdown">
+
+
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">Username</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+          <li class="dropdown-header">
+            <h6>Родник</h6>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <i class="bi bi-gear"></i>
+              <span>Account Settings</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="/logout">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Выход</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="/admin-test">
+        <i class="bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link " href="">
+        <i class="bi bi-menu-button-wide"></i>
+        <span>Заявки</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+
+
+    <li class="nav-heading">Pages</li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="users-profile.html">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </li><!-- End Profile Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="pages-contact.html">
+        <i class="bi bi-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </li><!-- End Contact Page Nav -->
+
+
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h1>Панель управления</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active">Панель управления</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section dashboard">
+    <div class="row">
+
+      <!-- Left side columns -->
+      <div class="col-lg-12">
+        <div class="row">
+
+          <table class="table table-striped" id="allOrderTable">
+            <thead>
+            <tr style="text-align: center">
+              <th scope="col">Дата</th>
+              <th scope="col">Статус</th>
+              <th scope="col">Описание</th>
+              <th scope="col">Стоимость</th>
+              <th scope="col">Покупатель</th>
+              <th scope="col">Телефон</th>
+              <th scope="col">Доп. информация</th>
+              <th scope="col">Изменить</th>
+              <th scope="col">Удалить</th>
+            </tr>
+            </thead>
+            <tr>
+              <tbody style="text-align: center" id="allOrderTableBody">
+
+              </tbody>
+
+              <!--модальное окно редактировать заказ-->
+              <div class="modal fade" id="modalEdit">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <form id="modalEditForm">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Изменить заказ</h5>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body text-center">
+                        <div class="form-group required">
+                          <div class="controls">
+                            <p>
+                              <label for="idEditOrder">
+                                <strong>ID</strong>
+                                <input class="form-control"
+                                       name="id" id="idEditOrder"
+                                       disabled>
+                              </label>
+                            </p>
+
+
+                            <p>
+                              <label for="editOrderAmount">
+                                <strong>Стоимость</strong>
+                                <input class="form-control"
+                                       name="amount"
+                                       id="editOrderAmount"
+                                       placeholder="Стоимость"
+                                       required>
+                              </label>
+                            </p>
+
+                            <p>
+                              <label for="orderContent">
+                                <strong>Описание</strong>
+                                <input class="form-control"
+                                       name="orderContent"
+                                       id="orderContent"
+                                       placeholder="orderContent">
+                              </label>
+                            </p>
+
+                            <p>
+                              <label for="editOrderBuyer">
+                                <strong>Покупатель</strong>
+                                <input class="form-control"
+                                       name="buyer"
+                                       id="editOrderBuyer"
+                                       placeholder="Покупатель"
+                                       required>
+                              </label>
+                            </p>
+                            <p>
+                              <label for="editOrderBuyerPhone">
+                                <strong>Телефон</strong>
+                                <input class="form-control"
+                                       name="phone"
+                                       id="editOrderBuyerPhone"
+                                       placeholder="Телефон"
+                                       required>
+                              </label>
+                            </p>
+
+                            <p>
+                              <label for="editOrderExtra">
+                                <strong>Доп. Информация</strong>
+                                <input class="form-control"
+                                       name="extra"
+                                       id="editOrderExtra"
+                                       placeholder="Доп. информация"
+                                       required>
+                              </label>
+                            </p>
+
+                            <p>
+                              <label class="container-fluid">
+                                <strong>Статус</strong>
+                                <select id="statusEdit" class="form-select"
+                                        name="status"
+                                        size="6" required>
+                                </select>
+                              </label>
+                            </p>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" id="closeEditModalWindow"
+                                    class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="submit" id="editOrder"
+                                    class="btn btn-primary">Edit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!--модальное окно удалить юзера-->
+              <div class="modal fade" id="modalDelete" tabindex="-1"
+                   aria-labelledby="edit"
+                   aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <form id="modalDeleteForm">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Удалить заказ</h5>
+                        <button type="button" class="btn-close"
+                                data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body text-center">
+                        <div class="form-group required">
+                          <div class="controls">
+                            <p>
+                              <label for="idDeleteOrder">
+                                <strong>ID</strong>
+                                <input class="form-control" type="number"
+                                       name="id" id="idDeleteOrder" disabled
+                                >
+                              </label>
+                            </p>
+                            <p>
+                              <label for="deleteOrderBuyer">
+                                <strong>Покупатель</strong>
+                                <input class="form-control" type="text"
+                                       name="buyer"
+                                       id="deleteOrderBuyer" disabled
+                                >
+                              </label>
+                            </p>
+                            <p>
+                              <label>
+                                <strong>Стоимость</strong>
+                                <input class="form-control" type="text"
+                                       name="amount"
+                                       id="deleteORderAmount" disabled
+                                >
+                              </label>
+                            </p>
+                            <p>
+                              <label for="deleteOrderContent">
+                                <strong>Описание</strong>
+                                <input class="form-control" type="text"
+                                       name="orderContent"
+                                       id="deleteOrderContent" disabled
+                                >
+                              </label>
+                            </p>
+
+                            <label class="container-fluid col-6"
+                            >
+                              <strong>Статус</strong>
+                              <select id="statusDelete" name="statusDelete"
+                                      class="form-select"
+                                      multiple size="6" disabled>
+                              </select>
+                            </label>
+
+                            <p>
+                              <label for="deleteOrderPhone">
+                                <strong>Телефон</strong>
+                                <input class="form-control" type="text"
+                                       name="phone"
+                                       id="deleteOrderPhone" disabled
+                                >
+                              </label>
+                            </p>
+
+                            <p>
+                              <label for="deleteOrderExtra">
+                                <strong>Доп. информация</strong>
+                                <input class="form-control" type="text"
+                                       name="extra"
+                                       id="deleteOrderExtra" disabled
+                                >
+                              </label>
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button"
+                                    class="btn btn-secondary" id="close"
+                                    data-bs-dismiss="modal">Close
+                            </button>
+                            <button type="button"
+                                    class="btn btn-danger" id="closeDeleteModal"
+                                    data-bs-dismiss="modal">Delete
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </tr>
+          </table>
+
+
+        </div>
+      </div><!-- End Left side columns -->
+
+    </div>
+  </section>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+  <div class="copyright">
+    &copy; Copyright <strong><span id="owner_text">Kaplaukhd</span></strong>. Все права защищены.
+  </div>
+  <div class="credits">
+  </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+<!-- Template Main JS File -->
+<script src="/assets/js/main.js"></script>
+
+<script type="module" src="/js/orders.js"></script>
+<script type="module" src="/js/functions.js"></script>
+
+</body>
+
+</html>
