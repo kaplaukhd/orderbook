@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.kata.spring.boot_security.demo.api.dto.CreateOrderRq;
 import ru.kata.spring.boot_security.demo.entity.OrderEntity;
 
+import java.util.List;
+
 
 @Repository
 public interface OrderRepo extends JpaRepository<OrderEntity, Long> {
@@ -16,6 +18,8 @@ public interface OrderRepo extends JpaRepository<OrderEntity, Long> {
     @Query("update orders o set o.status = ?1, o.orderContent = ?2, o.amount = ?3, o.buyer = ?4, o.phone = ?5, o.extra = ?6 " +
             "where o.id = ?7")
     void updateById(String status, String orderContent, Float amount, String buyer, String phone, String extra, Long id);
+
+    List<OrderEntity> findOrderEntitiesByStatus(String status);
 
 
     OrderEntity save(CreateOrderRq dto);

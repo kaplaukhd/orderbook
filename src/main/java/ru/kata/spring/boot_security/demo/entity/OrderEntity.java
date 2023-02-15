@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Getter
 @AllArgsConstructor
@@ -19,6 +21,8 @@ public class OrderEntity extends BaseEntity {
     private String buyer;
     private String phone;
     private String extra;
+
+
 
     @Override
     public String toString() {

@@ -5,6 +5,7 @@ import ru.kata.spring.boot_security.demo.api.dto.OrderDto;
 import ru.kata.spring.boot_security.demo.entity.OrderEntity;
 
 import java.util.List;
+import java.util.Map;
 
 public interface OrderService {
 
@@ -22,4 +23,6 @@ public interface OrderService {
     void deleteById(Long aLong);
 
     void updateOder(OrderDto entity, Long id);
+
+    Map<String, Integer> getInfo();
 }

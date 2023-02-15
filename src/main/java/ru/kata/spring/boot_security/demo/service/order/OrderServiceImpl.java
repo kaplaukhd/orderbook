@@ -8,8 +8,9 @@ import ru.kata.spring.boot_security.demo.entity.OrderEntity;
 import ru.kata.spring.boot_security.demo.notification.NotificationBot;
 import ru.kata.spring.boot_security.demo.repository.OrderRepo;
 
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -66,7 +67,21 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void updateOder(OrderDto entity, Long id) {
         orderRepo.updateById(entity.getStatus(), entity.getOrderContent(), entity.getAmount(),
-                entity.getBuyer(),entity.getPhone(), entity.getExtra(), id);
+                entity.getBuyer(), entity.getPhone(), entity.getExtra(), id);
+    }
+
+    @Transactional(readOnly = true)
+    public Map<String, Integer> getInfo() {
+        List<OrderEntity> list = orderRepo.findAll();
+        List<OrderEntity> purschaces = orderRepo.findOrderEntitiesByStatus("Выполнен");
+        int size = list.size();
+        int all_purschaces = purschaces.size();
+        int summ = purschaces.stream().mapToInt(x -> x.getAmount().intValue()).sum();
+        Map<String, Integer> map = new HashMap<>();
+        map.put("all", size);
+        map.put("all_purschaces", all_purschaces);
+        map.put("summ", summ);
+        return map;
     }
 
 }

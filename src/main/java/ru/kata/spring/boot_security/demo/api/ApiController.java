@@ -12,6 +12,7 @@ import ru.kata.spring.boot_security.demo.service.role.RoleService;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin("*")
 @RestController
@@ -62,6 +63,11 @@ public class ApiController {
     @GetMapping("/orders/roles")
     public ResponseEntity<List<Role>> getRoles() {
         return new ResponseEntity<>(roleService.getAllRoles(), HttpStatus.OK);
+    }
+
+    @GetMapping("orders/info")
+    public ResponseEntity<Map<String, Integer>> getInfo() {
+        return new ResponseEntity<>(orderService.getInfo(), HttpStatus.OK);
     }
 
 }

@@ -6,7 +6,6 @@ window.onload = () => {
 
 
 
-//функция заполнения главной таблицы ордеров
 function fillUsersTable() {
     const allUsersTableBody = document.getElementById('allOrderTableBody')
 
