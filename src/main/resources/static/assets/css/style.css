@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
 }
 
+.table-responsive {
+  overflow-x: auto;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;

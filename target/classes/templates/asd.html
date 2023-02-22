@@ -1,0 +1,78 @@
+<section class="section dashboard">
+    <div class="row">
+        <!-- Left side columns -->
+        <div class="table-responsive " aria-labelledby="users-table-tab">
+            <div class="row">
+                <table class="table table-striped" id="allOrderTable">
+                    <thead>
+                    <tr style="text-align: center">
+                        <th scope="col">Дата</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Стоимость</th>
+                        <th scope="col">Покупатель</th>
+                        <th scope="col">Телефон</th>
+                        <th scope="col">Доп. информация</th>
+                        <th scope="col">Изменить</th>
+                        <th scope="col">Удалить</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <tbody style="text-align: center" id="allOrderTableBody">
+                        </tbody>
+                        <!--модальное окно редактировать заказ-->
+                        <div class="modal fade" id="modalEdit">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form id="modalEditForm">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Изменить заказ</h5>
+                                            <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <div class="form-group required">
+                                                <div class="controls">
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--модальное окно удалить юзера-->
+                        <div class="modal fade" id="modalDelete" tabindex="-1"
+                             aria-labelledby="edit"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <form id="modalDeleteForm">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Удалить заказ</h5>
+                                            <button type="button" class="btn-close"
+                                                    data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            <div class="form-group required">
+                                                <div class="controls">
+
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+        </div><!-- End Left side columns -->
+    </div>
+</section>

@@ -45,12 +45,6 @@
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    <div class="search-bar">
-        <form class="search-form d-flex align-items-center" method="POST" action="#">
-            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-        </form>
-    </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
@@ -68,7 +62,6 @@
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                     <span class="d-none d-md-block dropdown-toggle ps-2">Username</span>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -252,37 +245,22 @@
                         </div>
                     </div><!-- End Reports -->
 
-                    <!-- Top Selling -->
+                    <!-- Топ товары -->
                     <div class="col-12">
                         <div class="card top-selling overflow-auto">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
-
                             <div class="card-body pb-0">
-                                <h5 class="card-title">Top Selling <span>| Today</span></h5>
+                                <h5 href="http://77.232.37.111:7054/products" class="card-title">Wildberries<span> | </span></h5>
 
                                 <table class="table table-borderless">
                                     <thead>
                                     <tr>
                                         <th scope="col">Preview</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Price</th>
-                                        <th scope="col">Sold</th>
-                                        <th scope="col">Revenue</th>
+                                        <th scope="col">Номенклатура</th>
+                                        <th scope="col">Цена</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="wb-table-body">
                                     <tr>
                                         <th scope="row"><a href="#"><img src="/assets/img/product-1.jpg" alt=""></a>
                                         </th>
@@ -292,42 +270,7 @@
                                         <td class="fw-bold">124</td>
                                         <td>$5,828</td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#"><img src="/assets/img/product-2.jpg" alt=""></a>
-                                        </th>
-                                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique
-                                            doloremque</a></td>
-                                        <td>$46</td>
-                                        <td class="fw-bold">98</td>
-                                        <td>$4,508</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#"><img src="/assets/img/product-3.jpg" alt=""></a>
-                                        </th>
-                                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a>
-                                        </td>
-                                        <td>$59</td>
-                                        <td class="fw-bold">74</td>
-                                        <td>$4,366</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#"><img src="/assets/img/product-4.jpg" alt=""></a>
-                                        </th>
-                                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum
-                                            error</a></td>
-                                        <td>$32</td>
-                                        <td class="fw-bold">63</td>
-                                        <td>$2,016</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><a href="#"><img src="/assets/img/product-5.jpg" alt=""></a>
-                                        </th>
-                                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus
-                                            repellendus</a></td>
-                                        <td>$79</td>
-                                        <td class="fw-bold">41</td>
-                                        <td>$3,239</td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
 
@@ -342,69 +285,6 @@
             <!-- Right side columns -->
             <div class="col-lg-4">
 
-
-                <!-- Budget Report -->
-                <div class="card">
-
-                    <div class="card-body pb-0">
-                        <h5 class="card-title">Бюджетный отчет <span>| Этот месяц</span></h5>
-
-                        <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-                                let budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
-                                    legend: {
-                                        data: ['Allocated Budget', 'Actual Spending']
-                                    },
-                                    radar: {
-                                        // shape: 'circle',
-                                        indicator: [{
-                                            name: 'Sales',
-                                            max: 6500
-                                        },
-                                            {
-                                                name: 'Administration',
-                                                max: 16000
-                                            },
-                                            {
-                                                name: 'Information Technology',
-                                                max: 30000
-                                            },
-                                            {
-                                                name: 'Customer Support',
-                                                max: 38000
-                                            },
-                                            {
-                                                name: 'Development',
-                                                max: 52000
-                                            },
-                                            {
-                                                name: 'Marketing',
-                                                max: 25000
-                                            }
-                                        ]
-                                    },
-                                    series: [{
-                                        name: 'Budget vs spending',
-                                        type: 'radar',
-                                        data: [{
-                                            value: [4200, 3000, 20000, 35000, 50000, 18000],
-                                            name: 'Allocated Budget'
-                                        },
-                                            {
-                                                value: [5000, 14000, 28000, 26000, 42000, 21000],
-                                                name: 'Actual Spending'
-                                            }
-                                        ]
-                                    }]
-                                });
-                                budgetChart.show
-                            });
-
-                        </script>
-
-                    </div>
-                </div><!-- End Budget Report -->
 
                 <!-- Website Traffic -->
                 <div class="card">

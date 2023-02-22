@@ -7,7 +7,9 @@ import ru.kata.spring.boot_security.demo.api.dto.OrderDto;
 import ru.kata.spring.boot_security.demo.entity.OrderEntity;
 import ru.kata.spring.boot_security.demo.notification.NotificationBot;
 import ru.kata.spring.boot_security.demo.repository.OrderRepo;
+import ru.kata.spring.boot_security.demo.util.OrderComparator;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
     @Transactional(readOnly = true)
     @Override
     public List<OrderDto> findAll() {
-        return orderRepo.findAll().stream().map(OrderDto::new).collect(Collectors.toList());
+        return orderRepo.findAll().stream().map(OrderDto::new).sorted(new OrderComparator()).collect(Collectors.toList());
     }
 
     @Transactional
